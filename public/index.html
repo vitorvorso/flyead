@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FlyEAD</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+        crossorigin="anonymous">
+    <style>
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif
+        }
+
+        @media print {
+            .no-print,
+            .no-print * {
+                display: none !important;
+            }
+        }
+
+        .container {
+            background-color: #fff;
+        }
+
+        .excel table {
+            font-family: Calibri, 'Segoe UI', Thonburi, Arial, Verdana, sans-serif;
+            font-size: 14px;
+
+            border-spacing: 0;
+
+            color: #000;
+            border-width: 0 0 1px 1px;
+            border-style: solid;
+            border-color: #cacaca;
+            table-layout: fixed;
+        }
+
+        .excel table:focus {
+            outline: none;
+        }
+
+        .excel td,
+        th {
+            position: relative;
+
+            display: inline-block;
+
+            box-sizing: border-box;
+            width: 80px;
+            height: 25px;
+            margin: 0;
+            padding: 0;
+
+            border-width: 1px 1px 0 0;
+            border-style: solid;
+            border-color: #cacaca;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .excel th {
+            background-color: #f0f0f0;
+        }
+
+        .excel td div,
+        th div {
+            height: 100%;
+        }
+
+        .excel td span,
+        th span {
+            line-height: 15px;
+
+            display: inline-block;
+
+            width: calc(100% - 8px);
+            height: calc(100% - 8px);
+            padding: 4px;
+        }
+
+        .excel td input {
+            font-family: Calibri, 'Segoe UI', Thonburi, Arial, Verdana, sans-serif;
+            font-size: 14px;
+
+            position: absolute;
+            z-index: 100;
+
+            display: inline-block;
+
+            width: calc(100% - 4px);
+            height: calc(100% - 2px);
+            margin: 0;
+            padding: 4px;
+
+            color: #000;
+            border: none;
+            background-color: #fff;
+        }
+
+        .excel td.selected {
+            border: 2px solid #1e6337;
+        }
+
+        .excel td.selected span {
+            padding: 3px 3px 3px 2px;
+        }
+
+        .excel input:focus,
+        select:focus,
+        textarea:focus,
+        button:focus {
+            outline: none;
+        }
+
+        .html2canvas-container {
+            width: 720px
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h3>
+            <img style="max-width:200px; margin-top: -2px; margin-right: 20px; width:200px;" class="responsive" src="https://d3eaq9o21rgr1g.cloudfront.net/assets/img/logo.svg"
+            />
+        </h3>
+        <div style=" width: 50%;margin: 0 auto;"> <span style="font-size: 40px">FlyEAD</span></div>
+</body>
+
+</html>

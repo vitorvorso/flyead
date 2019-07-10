@@ -1,0 +1,25 @@
+{
+  "name": "questionarios-backend",
+  "version": "1.0.0",
+  "description": "Aplicação de questionários",
+  "dependencies": {
+    "cors": "^2.8.4",
+    "dotenv": "^4.0.0",
+    "express": "~3.3.5",
+    "mongodb": "^2.2.33",
+    "node-salesforce": "^0.8.0"
+  },
+  "engines": {
+    "node": "6.10.0"
+  },
+  "keywords": [
+    "express",
+    "mongo"
+  ],
+  "author": {
+    "name": "Vorso",
+    "email": "projetos@vorso.com.br",
+    "url": "http://www.vorso.com.br/"
+  },
+  "license": "MIT"
+}
