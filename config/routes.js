@@ -13,5 +13,6 @@ module.exports = function (app) {
   app.post('/pagamento/criarAssinaturaPlano', pagamento.criarAssinaturaPlano);
   app.post('/pagamento/pegarSessao', pagamento.pegarSessao);
   app.get('/pagamento/consultarPlanos', pagamento.consultarPlanos);
-  
+  app.post('/pagamento/consultaAssinatura', pagamento.consultaAssinatura);
+  app.post('/pagamento/consultaAssinaturaPagamentos', pagamento.consultaAssinaturaPagamentos);
 };

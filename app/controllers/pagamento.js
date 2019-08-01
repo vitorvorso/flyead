@@ -95,3 +95,48 @@ exports.criarAssinaturaPlano = function(req, res) {
       });
 
    }
+
+   exports.consultaAssinatura = function(req, res) {
+    var options = {
+        method: "GET",
+        headers: {
+            Accept: "application/vnd.pagseguro.com.br.v3+json;charset=ISO-8859-1"
+          },
+        url:
+          "https://ws.sandbox.pagseguro.uol.com.br/pre-approvals/" + req.body.codigo + "/?email=vitornsp2@gmail.com&token=528D314F16E1433F90A0A23B7AB361EE"
+    }
+
+    console.log(res.cod)
+
+    request(options, function (error, response, body) {
+        if (error) throw new Error(error);
+      
+        res.send(body);
+      });
+
+   }
+
+   exports.consultaAssinaturaPagamentos = function(req, res) {
+    var options = {
+        method: "GET",
+        headers: {
+            Accept: "application/vnd.pagseguro.com.br.v3+json;charset=ISO-8859-1"
+          },
+        url:
+          "https://ws.sandbox.pagseguro.uol.com.br/pre-approvals/" + req.body.codigo + "/payment-orders/?email=vitornsp2@gmail.com&token=528D314F16E1433F90A0A23B7AB361EE"
+    }
+
+    console.log(res.cod)
+
+    request(options, function (error, response, body) {
+        if (error) throw new Error(error);
+      
+        res.send(body);
+      });
+
+   }
+
+
+   
+
+
