@@ -28,7 +28,7 @@ exports.criarPlano = function(req, res) {
 exports.criarAssinaturaPlano = function(req, res) {
     
      var data = JSON.stringify(req.body)
-     console.log("dados " + dada);
+     console.log("dados " + data);
      var options = {
        method: "POST",
        url:
