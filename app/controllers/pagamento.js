@@ -28,7 +28,7 @@ exports.criarPlano = function(req, res) {
 exports.criarAssinaturaPlano = function(req, res) {
     
      var data = JSON.stringify(req.body)
-   
+     console.log("dados " + dada);
      var options = {
        method: "POST",
        url:
@@ -39,8 +39,6 @@ exports.criarAssinaturaPlano = function(req, res) {
        },
        body: data
      };
-   
-     var teste = { nome: "dasdad", pedido: "dasadaa" };
    
      request(options, function (error, response, body) {
        if (error) throw new Error(error);
