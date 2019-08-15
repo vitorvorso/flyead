@@ -1,13 +1,14 @@
 var request = require("request");
 
+const url = process.env.PAG_URL || "https://ws.sandbox.pagseguro.uol.com.br/";
+
 exports.criarPlano = function(req, res) {
  
   var data = JSON.stringify(req.body)
 
   var options = {
     method: "POST",
-    url:
-      "https://ws.sandbox.pagseguro.uol.com.br/pre-approvals/request/?email=vitornsp2@gmail.com&token=528D314F16E1433F90A0A23B7AB361EE",
+    url: url+ "pre-approvals/request/?email=vitornsp2@gmail.com&token=528D314F16E1433F90A0A23B7AB361EE",
     headers: {
       "Content-Type": "application/json",
       Accept: "application/vnd.pagseguro.com.br.v3+json;charset=ISO-8859-1"
@@ -31,8 +32,7 @@ exports.criarAssinaturaPlano = function(req, res) {
      console.log("dados " + data);
      var options = {
        method: "POST",
-       url:
-         "https://ws.sandbox.pagseguro.uol.com.br/pre-approvals?email=vitornsp2@gmail.com&token=528D314F16E1433F90A0A23B7AB361EE",
+       url: url + "pre-approvals?email=vitornsp2@gmail.com&token=528D314F16E1433F90A0A23B7AB361EE",
        headers: {
          "Content-Type": "application/json",
          Accept: "application/vnd.pagseguro.com.br.v3+json;charset=ISO-8859-1"
@@ -54,8 +54,7 @@ exports.criarAssinaturaPlano = function(req, res) {
    
      var options = {
        method: "POST",
-       url:
-         "https://ws.sandbox.pagseguro.uol.com.br/sessions?email=vitornsp2@gmail.com&token=528D314F16E1433F90A0A23B7AB361EE",
+       url: url + "sessions?email=vitornsp2@gmail.com&token=528D314F16E1433F90A0A23B7AB361EE",
        headers: {
          "Content-Type": "application/x-www-form-urlencoded",
          Accept: "*/*"
@@ -82,8 +81,7 @@ exports.criarAssinaturaPlano = function(req, res) {
         headers: {
             Accept: "application/vnd.pagseguro.com.br.v3+json;charset=ISO-8859-1"
           },
-        url:
-          "https://ws.sandbox.pagseguro.uol.com.br/pre-approvals/request?email=vitornsp2@gmail.com&token=528D314F16E1433F90A0A23B7AB361EE&page=1&maxPageResults=100&status=ALL&startCreationDate=2019-06-10T12:46:48.630Z&endCreationDate=2019-07-09T12:46:48.630Z"
+        url: url + "pre-approvals/request?email=vitornsp2@gmail.com&token=528D314F16E1433F90A0A23B7AB361EE&page=1&maxPageResults=100&status=ALL&startCreationDate=2019-06-10T12:46:48.630Z&endCreationDate=2019-07-09T12:46:48.630Z"
     }
 
     request(options, function (error, response, body) {
@@ -100,8 +98,7 @@ exports.criarAssinaturaPlano = function(req, res) {
         headers: {
             Accept: "application/vnd.pagseguro.com.br.v3+json;charset=ISO-8859-1"
           },
-        url:
-          "https://ws.sandbox.pagseguro.uol.com.br/pre-approvals/" + req.body.codigo + "/?email=vitornsp2@gmail.com&token=528D314F16E1433F90A0A23B7AB361EE"
+        url: url + "pre-approvals/" + req.body.codigo + "/?email=vitornsp2@gmail.com&token=528D314F16E1433F90A0A23B7AB361EE"
     }
 
     console.log(res.cod)
@@ -120,8 +117,7 @@ exports.criarAssinaturaPlano = function(req, res) {
         headers: {
             Accept: "application/vnd.pagseguro.com.br.v3+json;charset=ISO-8859-1"
           },
-        url:
-          "https://ws.sandbox.pagseguro.uol.com.br/pre-approvals/" + req.body.codigo + "/payment-orders/?email=vitornsp2@gmail.com&token=528D314F16E1433F90A0A23B7AB361EE"
+        url: url + "pre-approvals/" + req.body.codigo + "/payment-orders/?email=vitornsp2@gmail.com&token=528D314F16E1433F90A0A23B7AB361EE"
     }
 
     console.log(res.cod)
@@ -133,6 +129,25 @@ exports.criarAssinaturaPlano = function(req, res) {
       });
 
    }
+
+   exports.criarNaoAssinante = function(req, res) {
+    var options = {
+        method: "POST",
+        headers: {
+            Accept: "application/vnd.pagseguro.com.br.v3+json;charset=ISO-8859-1"
+          },
+        url: url + "pre-approvals/" + req.body.codigo + "/payment-orders/?email=vitornsp2@gmail.com&token=528D314F16E1433F90A0A23B7AB361EE"
+    }
+
+    console.log(res.cod)
+
+    request(options, function (error, response, body) {
+        if (error) throw new Error(error);
+      
+        res.send(body);
+      });
+
+   } 
 
 
    

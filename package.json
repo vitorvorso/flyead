@@ -1,7 +1,7 @@
 {
-  "name": "questionarios-backend",
+  "name": "flyead-pagamento",
   "version": "1.0.0",
-  "description": "Aplicação de questionários",
+  "description": "Aplicação de pagamentos",
   "dependencies": {
     "cors": "^2.8.4",
     "dotenv": "^4.0.0",

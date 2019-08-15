@@ -8,6 +8,7 @@ module.exports = function (app) {
   });
 
   var pagamento = require('../app/controllers/pagamento');
+  var email = require('../app/controllers/email');
 
   app.post('/pagamento/criarplano', pagamento.criarPlano);
   app.post('/pagamento/criarAssinaturaPlano', pagamento.criarAssinaturaPlano);
@@ -15,4 +16,5 @@ module.exports = function (app) {
   app.get('/pagamento/consultarPlanos', pagamento.consultarPlanos);
   app.post('/pagamento/consultaAssinatura', pagamento.consultaAssinatura);
   app.post('/pagamento/consultaAssinaturaPagamentos', pagamento.consultaAssinaturaPagamentos);
+  app.post('/email/enviar', email.enviar);
 };
