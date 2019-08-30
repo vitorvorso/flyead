@@ -160,7 +160,7 @@ exports.criarNaoAssinante = function(req, res) {
 exports.notification = function(req, res) {
 
   var options = {
-    method: "POST",
+    method: "GET",
     headers: {
       Accept: "application/vnd.pagseguro.com.br.v3+json;charset=ISO-8859-1"
     },
