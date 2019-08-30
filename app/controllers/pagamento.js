@@ -28,7 +28,7 @@ exports.criarPlano = function(req, res) {
 
 exports.criarAssinaturaPlano = function(req, res) {
   var data = JSON.stringify(req.body);
-  console.log("dados " + data);
+ // console.log("dados " + data);
   var options = {
     method: "POST",
     url:
@@ -126,7 +126,7 @@ exports.consultaAssinaturaPagamentos = function(req, res) {
       "/payment-orders/?email=vitornsp2@gmail.com&token=528D314F16E1433F90A0A23B7AB361EE"
   };
 
-  console.log(res.cod);
+  //console.log(res.cod);
 
   request(options, function(error, response, body) {
     if (error) throw new Error(error);
@@ -170,8 +170,8 @@ exports.notification = function(req, res) {
       "/payment-orders/?email=vitornsp2@gmail.com&token=528D314F16E1433F90A0A23B7AB361EE"
     };
 
-  console.log(req.body);
+  console.log("aqui body " + req.body);
 
   res.send(req.body);
-  
+
 };
