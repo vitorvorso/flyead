@@ -158,17 +158,6 @@ exports.criarNaoAssinante = function(req, res) {
 };
 
 exports.notification = function(req, res) {
-  var options = {
-    method: "POST",
-    headers: {
-      Accept: "application/vnd.pagseguro.com.br.v3+json;charset=ISO-8859-1"
-    },
-    url:
-      url +
-      "pre-approvals/" +
-      req.body.codigo +
-      "/payment-orders/?email=vitornsp2@gmail.com&token=528D314F16E1433F90A0A23B7AB361EE"
-    };
 
   console.log("aqui body " + req.body);
 
