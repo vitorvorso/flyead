@@ -16,5 +16,6 @@ module.exports = function (app) {
   app.get('/pagamento/consultarPlanos', pagamento.consultarPlanos);
   app.post('/pagamento/consultaAssinatura', pagamento.consultaAssinatura);
   app.post('/pagamento/consultaAssinaturaPagamentos', pagamento.consultaAssinaturaPagamentos);
+  app.post('/pagamento/notification', pagamento.notification);
   app.post('/email/enviar', email.enviar);
 };
