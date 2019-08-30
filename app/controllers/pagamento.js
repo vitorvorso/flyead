@@ -171,7 +171,7 @@ exports.notification = function(req, res) {
       "?email=vitornsp2@gmail.com&token=528D314F16E1433F90A0A23B7AB361EE"
   };
 
-  console.log("aqui code " + req.body);
+  console.log("aqui code " + JSON.stringify(req.body));
 
   request(options, function(error, response, body) {
     if (error) throw new Error(error);
