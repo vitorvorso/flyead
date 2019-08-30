@@ -1,4 +1,5 @@
 var express = require('express');
+var bodyParser = require('body-parser');
 var fs = require('fs');
 var https = require('https');
 var sslOptions = {
@@ -11,6 +12,8 @@ dotenv.load();
 
 // Configure server
 var app = express();
+app.use(bodyParser.json()); // support json encoded bodies
+app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
 require('./config/express')(app);
 require('./config/routes')(app);
 
