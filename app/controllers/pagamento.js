@@ -1,4 +1,17 @@
 var request = require("request");
+var MongoClient = require('mongodb').MongoClient,
+ f = require('util').format,
+ fs = require('fs');
+
+ var ca = [fs.readFileSync("rds-combined-ca-bundle.pem")];
+
+ var client = MongoClient.connect(
+  'mongodb://deployvorso:deployvorso@docdb-flyeadpagamento.cluster-coyocvcgapnb.us-east-1.docdb.amazonaws.com:27017/test?ssl=true&replicaSet=rs0&readPreference=secondaryPreferred',
+  {
+   sslValidate: true,
+   sslCA:ca,
+   useNewUrlParser: true
+  });
 
 const url = process.env.PAG_URL || "https://ws.sandbox.pagseguro.uol.com.br/";
 
