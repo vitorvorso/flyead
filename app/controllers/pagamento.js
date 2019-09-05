@@ -166,7 +166,7 @@ exports.notification = function(req, res) {
     },
     url:
       url +
-      "pre-approvals/notifications/" +
+      "v3/transactions/notifications/" +
       req.body.notificationCode +
       "?email=vitornsp2@gmail.com&token=528D314F16E1433F90A0A23B7AB361EE"
   };
