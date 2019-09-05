@@ -161,9 +161,6 @@ exports.notification = function(req, res) {
 
   var options = {
     method: "GET",
-    headers: {
-      Accept: "application/vnd.pagseguro.com.br.v3+json;charset=ISO-8859-1"
-    },
     url:
       url +
       "v3/transactions/notifications/" +
